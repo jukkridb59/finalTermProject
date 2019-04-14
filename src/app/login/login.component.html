@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<form class="px-4 py-3 container mt-3 ">
+  <div class="form-group">
+    <label for="lg-username">Username</label>
+    <input type="username" class="form-control" id="lg-username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="lg-password">Password</label>
+    <input type="password" class="form-control" id="lg-password" placeholder="Password">
+  </div>
+  <div class="form-group">
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-success" routerLink="/register">Register</button>
+  <button type="submit" class="btn btn-danger" routerLink="/home">Cancel</button>
+</form>
+
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/rental">Rental</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/lessor">Lessor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/admin">Admin</a>
+    </li>
+  </ul>

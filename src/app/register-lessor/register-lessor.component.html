@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<nav class="navbar navbar-light bg-light justify-content-center">
+  <form class="form-inline">
+    <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/register" >Rental User</button>
+    <button class="btn btn-outline-warning" type="button">Lessor User</button>
+  </form>
+</nav>
+
+<nav class="navbar navbar-light bg-white">
+    <span class="navbar-brand mb-0 h1">Register for lessor</span>
+  </nav>
+
+<form class="px-4 py-3 container mt-3">
+  <div class="form-group">
+    <label for="rgt-username-lessor">Username</label>
+    <input type="username-lessor" class="form-control" id="rgt-username-lessor" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="rgt-name-lessor">Name</label>
+    <input type="name-lessor" class="form-control" id="rgt-name-lessor" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="rgt-password-lessor">Password</label>
+    <input type="password-lessor" class="form-control" id="rgt-password-lessor" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="rgt-address-lessor">Address</label>
+    <input type="address-lessor" class="form-control" id="rgt-address-lessor" placeholder="Address">
+  </div>
+  <div class="form-group">
+    <label for="rgt-age-lessor">Age</label>
+    <input type="age-lessor" class="form-control" id="rgt-age-lessor" placeholder="Age">
+  </div>
+  <div class="form-group">
+    <label for="rgt-sex-lessor">Sex</label>
+    <!-- <input type="sex" class="form-control" id="rgt-sex" placeholder="Sex"> -->
+    <select class="form-control">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+  </div>
+
+  <button type="submit" class="btn btn-success">Confirm</button>
+  <button type="submit" class="btn btn-danger" routerLink="/home">Cancel</button>
+</form>

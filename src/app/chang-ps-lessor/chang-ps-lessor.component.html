@@ -1,0 +1,56 @@
+<app-navbar-login></app-navbar-login>
+<div class="row">
+  <div class="col-2">
+    <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+        aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">My Rental Car</a>
+      <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+        role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">Profile</a>
+      <a class="nav-link active bg-dark text-white" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">Chang Password</a>
+    </div>
+  </div>
+  <div class="col-10">
+      <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">CHANG PASSWORD</span>
+        </nav>
+
+        <form class="px-4 py-3 container mt-3">
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">New Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="New Password">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm Password">
+                </div>
+              </div>
+            <div class="form-group row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Confirm
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-success">Confirm</button>
+              </div>
+            </div>
+          </form>
+  </div>
+</div>

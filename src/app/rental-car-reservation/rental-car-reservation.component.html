@@ -1,0 +1,47 @@
+<app-navbar-login></app-navbar-login>
+<div class="row">
+    <div class="col-2">
+        <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/rental">Car List</a>
+            <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me">Profile</a>
+            <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                role="tab" aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps">Chang
+                Password</a>
+
+            <a class="nav-link text-dark" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
+                role="tab" aria-controls="v-pills-settings" aria-selected="false" routerLink="/rental-history">
+                Rental history</a>
+        </div>
+    </div>
+    <div class="col-10">
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">CAR RESERVATION</span>
+        </nav>
+
+        <form class="px-4 py-3 container mt-3">
+            <div class="form-group">
+              <label for="rgt-username">Car ID</label>
+              <input type="username" class="form-control" id="rgt-username" placeholder="Car ID">
+            </div>
+            <div class="form-group">
+              <label for="rgt-name">Start Date</label>
+              <input type="name" class="form-control" id="rgt-name" placeholder="Start Date">
+            </div>
+            <div class="form-group">
+              <label for="rgt-password">End Date</label>
+              <input type="password" class="form-control" id="rgt-password" placeholder="End Date">
+            </div>
+            <div class="form-group">
+              <label for="rgt-address">Rental ID</label>
+              <input type="address" class="form-control" id="rgt-address" placeholder="Rental ID">
+            </div>
+          
+            <button type="submit" class="btn btn-success">Confirm</button>
+            <button type="submit" class="btn btn-danger" routerLink="/rental">Cancel</button>
+          </form>
+        
+
+    </div>
+</div>

@@ -1,0 +1,153 @@
+<app-navbar-login></app-navbar-login>
+<div class="row">
+  <div class="col-2">
+    <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+        role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">My Rental Car</a>
+      <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+        aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">Profile</a>
+      <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">Chang Password</a>
+    </div>
+  </div>
+
+  <div class="col-10">
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">MY RENTAL CAR</span>
+    </nav>
+
+    <div class="row">
+      <div class="col-2">
+
+        <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">Car List</a>
+          <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+            role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lesson-add-car">Add Car</a>
+          <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false" routerLink="/lessor">Edit Car</a>
+        </div>
+
+      </div>
+
+      <div class="col-10" >
+        <nav class="navbar navbar-light bg-secondary ">
+          <span class="navbar-brand mb-0 h1 text-white">ADD CAR</span>
+        </nav>
+
+        <!-- Add car -->
+        <form class="px-4 py-3 container bg-light" [formGroup]="carForm" (ngSubmit)="submitCarData()" novalidate>
+          <!-- <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Car ID</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Car ID">
+            </div>
+          </div> -->
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Band</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="band" class="form-control" placeholder="Band">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Category</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="category" class="form-control" placeholder="Category">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Seat</label>
+            <div class="col-sm-10">
+              <select class="form-control" formControlName="seat">
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+                <option>9</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Gear</label>
+            <div class="col-sm-10">
+              <select class="form-control" formControlName="gear">
+                <option>Automatic</option>
+                <option>Manual</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Color</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="color" class="form-control"  placeholder="Color">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Position</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="position" class="form-control" placeholder="Position">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Year</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="year" class="form-control" placeholder="Year">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Price</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="price" class="form-control" placeholder="Price">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Lesson ID</label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="lessorKey" class="form-control" placeholder="Lesson ID">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Picture</label>
+            <div class="col-sm-10">
+                <form>
+                    <div class="form-group">
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                  </form>
+            </div>
+          </div>
+
+
+
+          <div class="form-group row text-center">
+            <div class="col-sm-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label text-dark" for="gridCheck1">
+                  Confirm
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row text-center">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-warning">Confirm</button>
+            </div>
+          </div>
+        </form>
+
+
+
+
+
+      </div>
+    </div>
