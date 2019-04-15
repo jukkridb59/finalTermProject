@@ -29,6 +29,7 @@ import { RentalCarReservationComponent } from './rental-car-reservation/rental-c
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
-    AngularFireDatabaseModule,  // Firebase database module
+    AngularFirestoreModule,
     ReactiveFormsModule,
     FormsModule
   ],

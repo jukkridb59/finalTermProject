@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CarServiceService } from '../shared/cars/car-service.service';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-lesson-add-car',
@@ -8,69 +7,67 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./lesson-add-car.component.css']
 })
 export class LessonAddCarComponent implements OnInit {
-   public carForm: FormGroup;
+
+  cars: any;
+  carName: string;
+  carBand: string;
+  carCategory: string;
+  carSeat: string;
+  carGear: string;
+  carColor: string;
+  carPosition: string;
+  carYear: Date;
+  carPrice: Number;
+  lessorID: string;
+
 
   constructor(
-    public carApi: CarServiceService,
-    public fb: FormBuilder,
+    public carService: CarServiceService
   ) { }
 
   ngOnInit() {
-    this.carApi.GetCarList();
-    this.carForms();
+
   }
-
-  carForms() {
-    this.carForm = this.fb.group({
-      band: ['', [Validators.required, Validators.minLength(2)]],
-      category: ['', [Validators.required, Validators.minLength(2)]],
-      seat: ['', [Validators.required, Validators.minLength(2)]],
-      gear: ['', [Validators.required, Validators.minLength(2)]],
-      color: ['', [Validators.required, Validators.minLength(2)]],
-      position: ['', [Validators.required, Validators.minLength(2)]],
-      year: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      price: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      lessorKey: ['', [Validators.required, Validators.minLength(2)]]
-
+    // name: string;
+    // band: string;
+    // category: string;
+    // seat: string;
+    // gear: string;
+    // color: string;
+    // position: string;
+    // year: Date;
+    // price: Number;
+    // lessorKey: string;
+  CreateRecord() {
+    let record = {};
+    record['name'] = this.carName;
+    record['band'] = this.carBand;
+    record['category'] = this.carCategory;
+    record['seat'] = this.carSeat;
+    record['gear'] = this.carGear;
+    record['color'] = this.carColor;
+    record['position'] = this.carPosition;
+    record['year'] = this.carYear;
+    record['price'] = this.carPrice;
+    record['lessorID'] = this.lessorID;
+    this.carService.createCar(record).then(res => {
+      this.carName = "";
+      this.carBand = "";
+      this.carCategory = "";
+      this.carSeat = "";
+      this.carGear = "";
+      this.carColor = "";
+      this.carPosition = "";
+      this.carYear = undefined;
+      this.carPrice = undefined;
+      this.lessorID = "";
+      console.log(res);
+    })
+    .catch(err => {
+      console.log(err);
     });
+
   }
 
-  get band() {
-    return this.carForm.get('band');
-  }
-  get category() {
-    return this.carForm.get('category');
-  }
-  get seat() {
-    return this.carForm.get('seat');
-  }
-  get gear() {
-    return this.carForm.get('gear');
-  }
-  get color() {
-    return this.carForm.get('color');
-  }
-  get position() {
-    return this.carForm.get('position');
-  }
-  get year() {
-    return this.carForm.get('year');
-  }
-  get price() {
-    return this.carForm.get('price');
-  }
-  get lessorKey() {
-    return this.carForm.get('lessorKey');
-  }
-
-  // Reset student form's values
-  ResetForm() {
-    this.carForm.reset();
-  }
-
-  submitCarData() {
-    this.carApi.AddCar(this.carForm.value);
-    this.ResetForm();
-  }
 
 }

@@ -36,35 +36,44 @@
         </nav>
 
         <!-- Add car -->
-        <form class="px-4 py-3 container bg-light" [formGroup]="carForm" (ngSubmit)="submitCarData()" novalidate>
-          <!-- <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Car ID</label>
+        <div class="px-4 py-3 container bg-light" novalidate>
+          
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Name</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Car ID">
+              <input type="text" class="form-control" [(ngModel)]="carName" placeholder="Name">
             </div>
-          </div> -->
+          </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Band</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="band" class="form-control" placeholder="Band">
+              <input type="text" class="form-control" [(ngModel)]="carBand" placeholder="Band">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Category</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="category" class="form-control" placeholder="Category">
+              <select class="form-control" [(ngModel)]="carCategory">
+                <option>รถ ECO-Car (อีโคคาร์)</option>
+                <option>รถยนต์นั่งขนาดเล็ก (Compact Car)</option>
+                <option>รถยนต์นั่งขนาดใหญ่ (Full-Size Car)</option>
+                <option>รถยนต์สปอร์ตซีดาน / สปอร์ตคูเป้ / ซูเปอร์คาร์</option>
+                <option>รถยนต์เอนกประสงค์ (หรือ MPV)/รถตู้</option>
+                <option>รถยนต์เอนกประสงค์สมรรถนะสูง (หรือ SUV)</option>
+                <option>รถกระบะ (Pick-Up)</option>
+              </select>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Seat</label>
             <div class="col-sm-10">
-              <select class="form-control" formControlName="seat">
+              <select class="form-control" [(ngModel)]="carSeat">
                 <option>1</option>
                 <option>2</option>
-                <option>4</option>
+                <option>4-5</option>
                 <option>9</option>
               </select>
             </div>
@@ -73,7 +82,7 @@
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Gear</label>
             <div class="col-sm-10">
-              <select class="form-control" formControlName="gear">
+              <select class="form-control" [(ngModel)]="carGear">
                 <option>Automatic</option>
                 <option>Manual</option>
               </select>
@@ -83,35 +92,35 @@
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Color</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="color" class="form-control"  placeholder="Color">
+              <input type="text"  class="form-control" [(ngModel)]="carColor"  placeholder="Color">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Position</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="position" class="form-control" placeholder="Position">
+              <input type="text" [(ngModel)]="carPosition" class="form-control" placeholder="จังหวัด">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Year</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="year" class="form-control" placeholder="Year">
+              <input type="text" [(ngModel)]="carYear" class="form-control" placeholder="Year">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Price</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="price" class="form-control" placeholder="Price">
+              <input type="text" [(ngModel)]="carPrice" class="form-control" placeholder="Price">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Lesson ID</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="lessorKey" class="form-control" placeholder="Lesson ID">
+              <input type="text" [(ngModel)]="lessorID" class="form-control" placeholder="Lesson ID">
             </div>
           </div>
 
@@ -126,8 +135,6 @@
             </div>
           </div>
 
-
-
           <div class="form-group row text-center">
             <div class="col-sm-12">
               <div class="form-check">
@@ -140,10 +147,11 @@
           </div>
           <div class="form-group row text-center">
             <div class="col-sm-12">
-              <button type="submit" class="btn btn-warning">Confirm</button>
+              <button type="submit" class="btn btn-warning" (click)="CreateRecord()" [disabled]="!carName ||
+              !carBand || !carCategory || !carSeat || !carGear">Confirm</button>
             </div>
           </div>
-        </form>
+        </div>
 
 
 

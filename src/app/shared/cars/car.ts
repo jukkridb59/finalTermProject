@@ -1,5 +1,6 @@
 export interface Car {
     $key: string;
+    name: string;
     band: string;
     category: string;
     seat: string;

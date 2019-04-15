@@ -1,62 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Car } from './car';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarServiceService {
 
-  carsRef: AngularFireList<any>;
-  carRef: AngularFireObject<any>;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private firestore: AngularFirestore) { }
 
-  // Create car
-  AddCar(car: Car) {
-    this.carsRef.push({
-      band: car.band,
-      category: car.category,
-      seat: car.seat,
-      gear: car.gear,
-      color: car.color,
-      position: car.position,
-      year: car.year,
-      price: car.price,
-      lessorKey: car.lessorKey
-    });
+  createCar(record) {
+    return this.firestore.collection('carList').add(record);
   }
 
-  // Fetch Single car Object
-  GetCar(id: string) {
-    this.carRef = this.db.object('car-list/' + id);
-    return this.carRef;
+  readCar() {
+    return this.firestore.collection('carList').snapshotChanges();
   }
 
-  // Fetch car List
-  GetCarList() {
-    this.carsRef = this.db.list('car-list');
-    return this.carsRef;
+  updateCar(recordID, record) {
+    this.firestore.doc('carList/' + recordID).update(record);
   }
 
-  // Update car Object
-  UpdateCar(car: Car) {
-    this.carRef.update({
-      band: car.band,
-      category: car.category,
-      seat: car.seat,
-      gear: car.gear,
-      color: car.color,
-      position: car.position,
-      year: car.year,
-      price: car.price,
-      lessorKey: car.lessorKey
-    });
-  }
-
-  // Delete car Object
-  DeleteCar(id: string) {
-    this.carRef = this.db.object('car-list/' + id);
-    this.carRef.remove();
+  deleteCar(recordID) {
+    this.firestore.doc('carList/' + recordID).delete();
   }
 }

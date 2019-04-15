@@ -23,50 +23,21 @@
         </nav>
 
         <div class="col-12 mt-3">
-            <div class="card mb-3" style="max-width: 95%;">
+            <div class="card mb-3" style="max-width: 95%;" *ngFor="let item of cars">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="/assets/img/002.jpg" class="card-img" alt="...">
+                        <img src="/assets/img/002.jpg" class="card-img">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 95%;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="/assets/img/003.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 95%;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="/assets/img/004.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 class="card-title">{{item.carName}}</h5>
+                            <span class="card-text">ยี่ห้อ: {{item.carBand}}</span><br>
+                            <span class="card-text">หมวดหมู่: {{item.carCategory}}</span><br>
+                            <span class="card-text">ที่นั่ง: {{item.carSeat}} คน</span><br>
+                            <span class="card-text">เกียร์: {{item.carGear}}</span><br>
+                            <span class="card-text">สี: {{item.carColor}}</span><br>
+                            <span class="card-text">จังหวัด: {{item.carPosition}}</span><br>
+                            <span class="card-text">ราคา: {{item.carPrice}} ต่อวัน</span><br>
                         </div>
                     </div>
                 </div>
