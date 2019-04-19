@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,9 +30,17 @@ import { RentalCarReservationComponent } from './rental-car-reservation/rental-c
 
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { AuthRentalService } from '../app/auth/auth-rental.service';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { ChildComponent } from './child/child.component';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -54,17 +65,27 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ChangPsAdminComponent,
     LessonAddCarComponent,
     RentalCarReservationComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    ChildComponent,
+    HistoryComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
+    AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule
+    AngularFireAuthModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatTableModule
+
   ],
-  providers: [],
+  providers: [AuthRentalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

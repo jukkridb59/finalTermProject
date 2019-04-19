@@ -7,7 +7,7 @@ import { CarServiceService } from '../shared/cars/car-service.service';
   styleUrls: ['./lessor.component.css']
 })
 export class LessorComponent implements OnInit {
-
+ 
   cars: any;
   carName: string;
   carBand: string;
@@ -19,6 +19,7 @@ export class LessorComponent implements OnInit {
   carYear: Date;
   carPrice: Number;
   lessorID: string;
+  carStatus: string;
 
   constructor(public carService: CarServiceService) { }
 
@@ -37,12 +38,44 @@ export class LessorComponent implements OnInit {
           carPosition: e.payload.doc.data()['position'],
           carYear: e.payload.doc.data()['year'],
           carPrice: e.payload.doc.data()['price'],
-          lessorID: e.payload.doc.data()['lessorID']
+          lessorID: e.payload.doc.data()['lessorID'],
+          carStatus: e.payload.doc.data()['status']
         };
       })
       console.log(this.cars);
 
     });
+  }
+
+  RemoveCar(rowID) {
+    this.carService.deleteCar(rowID);
+  }
+
+  EditCar(record) {
+    record.isEdit = true;
+    record.EditName = record.name;
+    record.EditBand = record.band;
+    record.EditSeat = record.seat;
+    record.EditGear = record.gear;
+    record.EditColor = record.color;
+    record.EditPosition = record.position;
+    record.EditYear = record.year;
+    record.EditPrice = record.price;
+    record.EditLessorID = record.lessorID;
+  }
+ 
+  UpdateCar(recordRow) {
+    let record = {};
+    record['name'] = recordRow.EditName;
+    record['band'] = recordRow.EditBand;
+    record['seat'] = recordRow.EditSeat;
+    record['gear'] = recordRow.EditGear;
+    record['color'] = recordRow.EditColor;
+    record['position'] = recordRow.EditPosition;
+    record['year'] = recordRow.EditYear;
+    record['price'] = recordRow.EditPrice;
+    this.carService.updateCar(recordRow.id, record);
+    recordRow.isEdit = false;
   }
 
 }

@@ -19,6 +19,7 @@ export class LessonAddCarComponent implements OnInit {
   carYear: Date;
   carPrice: Number;
   lessorID: string;
+  status: boolean;
 
 
   constructor(
@@ -50,6 +51,8 @@ export class LessonAddCarComponent implements OnInit {
     record['year'] = this.carYear;
     record['price'] = this.carPrice;
     record['lessorID'] = this.lessorID;
+    record['status'] = "ว่าง";
+
     this.carService.createCar(record).then(res => {
       this.carName = "";
       this.carBand = "";
@@ -61,6 +64,7 @@ export class LessonAddCarComponent implements OnInit {
       this.carYear = undefined;
       this.carPrice = undefined;
       this.lessorID = "";
+      this.status = undefined;
       console.log(res);
     })
     .catch(err => {

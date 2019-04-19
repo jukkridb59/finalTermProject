@@ -3,17 +3,17 @@
   <div class="col-2">
     <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-        role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">My Rental Car</a>
+        role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">ข้อมูลรถเช่า</a>
       <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-        aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">Profile</a>
+        aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">ข้อมูลส่วนตัว</a>
       <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">Chang Password</a>
+        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">เปลี่ยนรหัสผ่าน</a>
     </div>
   </div>
-
+ 
   <div class="col-10">
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">MY RENTAL CAR</span>
+      <span class="navbar-brand mb-0 h1">รถเช่าของฉัน</span>
     </nav>
 
     <div class="row">
@@ -21,39 +21,37 @@
 
         <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-            aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">Car List</a>
+            aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">รถปล่อยเช่า</a>
           <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-            role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lesson-add-car">Add Car</a>
-          <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false" routerLink="/lessor">Edit Car</a>
+            role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lesson-add-car">เพิ่มรถเช่า</a>
         </div>
 
       </div>
 
       <div class="col-10" >
         <nav class="navbar navbar-light bg-secondary ">
-          <span class="navbar-brand mb-0 h1 text-white">ADD CAR</span>
+          <span class="navbar-brand mb-0 h1 text-white">เพิ่มรถเช่า</span>
         </nav>
 
         <!-- Add car -->
         <div class="px-4 py-3 container bg-light" novalidate>
           
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Name</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ชื่อรถ</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" [(ngModel)]="carName" placeholder="Name">
+              <input type="text" class="form-control" [(ngModel)]="carName" placeholder="ชื่อรถ">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Band</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ยี่ห้อ</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" [(ngModel)]="carBand" placeholder="Band">
+              <input type="text" class="form-control" [(ngModel)]="carBand" placeholder="ยี่ห้อ">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Category</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ประเภท</label>
             <div class="col-sm-10">
               <select class="form-control" [(ngModel)]="carCategory">
                 <option>รถ ECO-Car (อีโคคาร์)</option>
@@ -68,7 +66,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Seat</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ที่นั่ง</label>
             <div class="col-sm-10">
               <select class="form-control" [(ngModel)]="carSeat">
                 <option>1</option>
@@ -80,7 +78,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Gear</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">เกียร์</label>
             <div class="col-sm-10">
               <select class="form-control" [(ngModel)]="carGear">
                 <option>Automatic</option>
@@ -90,42 +88,42 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Color</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">สีรถ</label>
             <div class="col-sm-10">
-              <input type="text"  class="form-control" [(ngModel)]="carColor"  placeholder="Color">
+              <input type="text"  class="form-control" [(ngModel)]="carColor"  placeholder="สีรถ">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Position</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">จังหวัด</label>
             <div class="col-sm-10">
               <input type="text" [(ngModel)]="carPosition" class="form-control" placeholder="จังหวัด">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Year</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ปีรถ</label>
             <div class="col-sm-10">
-              <input type="text" [(ngModel)]="carYear" class="form-control" placeholder="Year">
+              <input type="text" [(ngModel)]="carYear" class="form-control" placeholder="ปีรถ">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Price</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ราคา</label>
             <div class="col-sm-10">
-              <input type="text" [(ngModel)]="carPrice" class="form-control" placeholder="Price">
+              <input type="text" [(ngModel)]="carPrice" class="form-control" placeholder="ราคาเช่าต่อวัน">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Lesson ID</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">ทะเบียนรถ</label>
             <div class="col-sm-10">
-              <input type="text" [(ngModel)]="lessorID" class="form-control" placeholder="Lesson ID">
+              <input type="text" [(ngModel)]="lessorID" class="form-control" placeholder="ทะเบียนรถ">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">Picture</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label text-dark">รูปถ่ายรถ</label>
             <div class="col-sm-10">
                 <form>
                     <div class="form-group">
@@ -137,25 +135,11 @@
 
           <div class="form-group row text-center">
             <div class="col-sm-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                <label class="form-check-label text-dark" for="gridCheck1">
-                  Confirm
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row text-center">
-            <div class="col-sm-12">
               <button type="submit" class="btn btn-warning" (click)="CreateRecord()" [disabled]="!carName ||
-              !carBand || !carCategory || !carSeat || !carGear">Confirm</button>
+              !carBand || !carCategory || !carSeat || !carGear">ยืนยัน</button>
             </div>
           </div>
         </div>
-
-
-
-
 
       </div>
     </div>

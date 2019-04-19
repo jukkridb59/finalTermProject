@@ -19,15 +19,17 @@ import { ChangPsLessorComponent } from './chang-ps-lessor/chang-ps-lessor.compon
 import { ChangPsAdminComponent } from './chang-ps-admin/chang-ps-admin.component';
 import { LessonAddCarComponent } from './lesson-add-car/lesson-add-car.component';
 import { RentalCarReservationComponent } from './rental-car-reservation/rental-car-reservation.component'
-import { from } from 'rxjs';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   { path: 'home' , component: HomeComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'about-me', component: AboutMeComponent },
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'rental' , component: RentalComponent},
+  { path: 'rental', component: RentalComponent},
   { path: 'lessor' , component: LessorComponent},
   { path: 'admin' , component: AdminComponent},
   { path: 'register-lessor' , component: RegisterLessorComponent},
@@ -40,8 +42,10 @@ const routes: Routes = [
   { path: 'chang-ps-admin', component: ChangPsAdminComponent},
   { path: 'lesson-add-car', component: LessonAddCarComponent},
   { path: 'rental-car-reservation', component: RentalCarReservationComponent},
-
-  { path: 'rental-history' , component: RentalHistoryComponent}
+  { path: 'rental-history' , component: RentalHistoryComponent},
+  { path: 'forgot-password', component: ForgotPasswordComponent},
+  { path: 'verify-email-address', component: VerifyEmailComponent},
+  { path: 'history', component: HistoryComponent }
 ];
 
 @NgModule({

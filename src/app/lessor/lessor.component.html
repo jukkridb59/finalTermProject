@@ -1,58 +1,160 @@
 <app-navbar-login></app-navbar-login>
+
 <div class="row">
   <div class="col-2">
     <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-        role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">My Rental Car</a>
-      <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-        aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">Profile</a>
-      <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">Chang Password</a>
+        role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">ข้อมูลรถเช่า</a>
     </div>
   </div>
 
   <div class="col-10">
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">MY RENTAL CAR</span>
+      <span class="navbar-brand mb-0 h1">รายการรถที่ให้เช่า</span>
     </nav>
 
     <div class="row">
-      <div class="col-2">
+      <!-- <div class="col-2">
 
         <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-            role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">Car List</a>
-          <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-            aria-controls="v-pills-home" aria-selected="true" routerLink="/lesson-add-car">Add Car</a>
-          <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false" routerLink="/lessor">Edit Car</a>
-        </div>
+            role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">รถปล่อยเช่า</a>
 
-      </div>
+        </div>
+      </div> -->
 
       <!-- Car List -->
 
       <div class="col-10 mt-3">
-        <div class="card mb-3" style="max-width: 95%;" *ngFor="let item of cars">
+        <div class="card mb-3" style="max-width: 95%;">
           <div class="row no-gutters">
             <div class="col-md-4">
-              <img src="/assets/img/002.jpg" class="card-img">
+              <img style="padding-top:15%" src="../../assets/img/izuzu.jpg" class="card-img">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{item.carName}}</h5>
-                <span class="card-text">ยี่ห้อ: {{item.carBand}}</span><br>
-                <span class="card-text">หมวดหมู่: {{item.carCategory}}</span><br>
-                <span class="card-text">ที่นั่ง: {{item.carSeat}} คน</span><br>
-                <span class="card-text">เกียร์: {{item.carGear}}</span><br>
-                <span class="card-text">สี: {{item.carColor}}</span><br>
-                <span class="card-text">จังหวัด: {{item.carPosition}}</span><br>
-                <span class="card-text">ราคา: {{item.carPrice}} ต่อวัน</span><br>
+                <h5 class="card-title">Isuzu MU-X 1.9 Ddi CD A/T</h5>
+                <span class="card-text">ยี่ห้อ: izuzu</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดใหญ่ (Full-Size Car)</span><br>
+                <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+                <span class="card-text">เกียร์: Manual</span><br>
+                <span class="card-text">สี: ขาว</span><br>
+                <span class="card-text">ราคา: 3,500 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="col-10 mt-3">
+        <div class="card mb-3" style="max-width: 95%">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img style="padding-top:15%" src="../../assets/img/audi.jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Audi TT Coupe 45 TFSI quattro S line MY19</h5>
+                <span class="card-text">ยี่ห้อ: audi</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดกลาง (Mid-Size Car)</span><br>
+                <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+                <span class="card-text">เกียร์: Manual</span><br>
+                <span class="card-text">สี: ฟ้า</span><br>
+                <span class="card-text">ราคา: 4,500 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 mt-3">
+        <div class="card mb-3" style="max-width: 95%;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img style="padding-top:15%" src="../../assets/img/ford.jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Ford Mustang 2.3L EcoBoost Coupe Performance Pack MY19</h5>
+                <span class="card-text">ยี่ห้อ: ford</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดกลาง (Mid-Size Car)</span><br>
+                <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+                <span class="card-text">เกียร์: Auto</span><br>
+                <span class="card-text">สี: แดง</span><br>
+                <span class="card-text">ราคา: 3,500 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 mt-3">
+        <div class="card mb-3" style="max-width: 95%;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img style="padding-top:15%" src="../../assets/img/MINI-Ice-Blue-Edition-9.jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"> MINI Cooper S Hatch 5 ประตู 2019</h5>
+                <span class="card-text">ยี่ห้อ: mini cooper</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดเล็ก (Small-Size Car)</span><br>
+                <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+                <span class="card-text">เกียร์: Auto</span><br>
+                <span class="card-text">สี: Ice Blue</span><br>
+                <span class="card-text">ราคา: 1,700 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 mt-3">
+        <div class="card mb-3" style="max-width: 95%;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img style="padding-top:15%" src="../../assets/img/toyota_ch-r2019 (8).jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"> Toyota C-HR 2019</h5>
+                <span class="card-text">ยี่ห้อ: Toyota</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์ SUV</span><br>
+                <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+                <span class="card-text">เกียร์: Auto</span><br>
+                <span class="card-text">สี: ขาว</span><br>
+                <span class="card-text">ราคา: 3,700 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 mt-3">
+        <div class="card mb-3" style="max-width: 95%;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img style="padding-top:15%" src="../../assets/img/01-aston-martin-vantage.jpg" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"> Aston Martin The New Vantage 2019</h5>
+                <span class="card-text">ยี่ห้อ: Aston</span><br>
+                <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดเล็ก (Small-Size Car)</span><br>
+                <span class="card-text">ที่นั่ง: 2 คน</span><br>
+                <span class="card-text">เกียร์: Auto</span><br>
+                <span class="card-text">สี: เทา</span><br>
+                <span class="card-text">ราคา: 5,000 บาท/วัน</span><br>
+                <a href="/rental" class="card-link">เช่ารถ</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

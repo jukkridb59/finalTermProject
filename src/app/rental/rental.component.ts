@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CarServiceService } from '../shared/cars/car-service.service';
+import { ReservationService } from '../shared/reservations/reservation.service';
+
 
 @Component({
   selector: 'app-rental',
@@ -7,41 +8,48 @@ import { CarServiceService } from '../shared/cars/car-service.service';
   styleUrls: ['./rental.component.css']
 })
 export class RentalComponent implements OnInit {
-  cars: any;
-  carName: string;
-  carBand: string;
-  carCategory: string;
-  carSeat: string;
-  carGear: string;
-  carColor: string;
-  carPosition: string;
-  carYear: Date;
-  carPrice: Number;
-  lessorID: string;
 
-  constructor(public carService: CarServiceService) { }
+  cars: any;
+  userName: string;
+  userCar: string;
+  userDate1: Date;
+  userDate2: Date;
+  userAddress: string;
+  userSex: string;
+  userAge: Number;
+  userPhone: string;
+
+  constructor(
+    public reservationService: ReservationService,
+  ) { }
 
   ngOnInit() {
-    this.carService.readCar().subscribe(data => {
-      this.cars = data.map(e => {
-        return {
-          id: e.payload.doc.id,
-          isEdit: false,
-          carName: e.payload.doc.data()['name'],
-          carBand: e.payload.doc.data()['band'],
-          carCategory: e.payload.doc.data()['category'],
-          carSeat: e.payload.doc.data()['seat'],
-          carGear: e.payload.doc.data()['gear'],
-          carColor: e.payload.doc.data()['color'],
-          carPosition: e.payload.doc.data()['position'],
-          carYear: e.payload.doc.data()['year'],
-          carPrice: e.payload.doc.data()['price'],
-          lessorID: e.payload.doc.data()['lessorID']
-        };
-      })
-      console.log(this.cars);
-
-    });
   }
 
+  CreateRecord() {
+    let record = {};
+    record['name'] = this.userName;
+    record['car'] = this.userCar;
+    record['dateFrom'] = this.userDate1;
+    record['dateTo'] = this.userDate2;
+    record['address'] = this.userAddress;
+    record['sex'] = this.userSex;
+    record['age'] = this.userAge;
+    record['phone'] = this.userPhone;
+
+    this.reservationService.createReservation(record).then(res => {
+      this.userName = "";
+      this.userCar = "";
+      this.userDate1 = undefined;
+      this.userDate2 = undefined;
+      this.userAddress = "";
+      this.userSex = "";
+      this.userAge = undefined;
+      this.userPhone = undefined;
+      console.log(res);
+    })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 }

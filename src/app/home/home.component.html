@@ -1,50 +1,65 @@
-<app-navbar></app-navbar>
+<app-navbar-login></app-navbar-login>
 
 <div class="jumbotron bg-light px-4 py-3 container mt-3">
-    <div class="text-center">
-        <img src="/assets/img/Logo.png" class="rounded w-25 p-3" alt="...">
-      </div>
-    <h1 class="display-4 text-center" >Boon Drive</h1>
-    <p class="lead text-center">[Rental car service of Thailand].</p>
-    <hr class="my-4">
-    <p class="text-center">เว็บไซต์เช่ารถชั้นนำของประเทศ อันดับหนึ่งของประเทศไทย มียอดผู้เข้าใช้กว่า 10 ล้านล้านคน</p>
-    <div class="text-center">
-    <a class="btn btn-warning btn-lg" href="#" routerLink="/register" role="button">สมัครเลย</a>
+  <div class="text-center">
+    <img src="/assets/img/Logo.png" class="rounded w-25 p-3" alt="...">
   </div>
+  <h1 class="display-4 text-center">Boon Drive</h1>
+  <p class="lead text-center">[Rental car service of Thailand].</p>
+  <hr class="my-4">
+  <p class="text-center">เว็บไซต์เช่ารถชั้นนำของประเทศ อันดับหนึ่งของประเทศไทย มียอดผู้เข้าใช้กว่า 10 ล้านล้านคน</p>
+  <div class="text-center">
+    <a class="btn btn-warning btn-lg" href="#" routerLink="/rental" role="button">เช่าเลย</a>
   </div>
+</div>
 
 <form class="px-4 py-3 container mt-3 ">
   <div class="card-deck ">
     <div class="card">
-      <img src="/assets/img/001.jpg" class="card-img-top" alt="...">
+      <img style="padding-top:10%" src="../../assets/img/izuzu.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
+        <h5 class="card-title">Isuzu MU-X 1.9 Ddi CD A/T</h5>
+        <span class="card-text">ยี่ห้อ: izuzu</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดใหญ่</span><br>
+        <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+        <span class="card-text">เกียร์: Manual</span><br>
+        <span class="card-text">สี: ขาว</span><br>
+        <span class="card-text">ราคา: 3,500 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
+
     <div class="card">
-      <img src="/assets/img/002.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/audi.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Audi TT Coupe 45 TFSI quattro S line MY19</h5>
+        <span class="card-text">ยี่ห้อ: audi</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดกลาง</span><br>
+        <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+        <span class="card-text">เกียร์: Manual</span><br>
+        <span class="card-text">สี: ฟ้า</span><br>
+        <span class="card-text">ราคา: 4,500 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
+
     <div class="card">
-      <img src="/assets/img/003.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/ford.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
+        <h5 class="card-title">Ford Mustang 2.3L EcoBoost Coupe Performance Pack MY19</h5>
+        <span class="card-text">ยี่ห้อ: ford</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดกลาง</span><br>
+        <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+        <span class="card-text">เกียร์: Auto</span><br>
+        <span class="card-text">สี: แดง</span><br>
+        <span class="card-text">ราคา: 3,500 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
   </div>
@@ -52,35 +67,48 @@
 
   <div class="card-deck">
     <div class="card">
-      <img src="/assets/img/004.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/MINI-Ice-Blue-Edition-9.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
+        <h5 class="card-title">MINI Cooper S Hatch 5 ประตู 2019</h5>
+        <span class="card-text">ยี่ห้อ: mini cooper</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดเล็ก</span><br>
+        <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+        <span class="card-text">เกียร์: Auto</span><br>
+        <span class="card-text">สี: Ice Blue</span><br>
+        <span class="card-text">ราคา: 1,700 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
     <div class="card">
-      <img src="/assets/img/005.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/toyota_ch-r2019 (8).jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Toyota C-HR 2019</h5>
+        <span class="card-text">ยี่ห้อ: Toyota</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์ SUV</span><br>
+        <span class="card-text">ที่นั่ง: 4-5 คน</span><br>
+        <span class="card-text">เกียร์: Auto</span><br>
+        <span class="card-text">สี: ขาว</span><br>
+        <span class="card-text">ราคา: 3,700 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
     <div class="card">
-      <img src="/assets/img/001.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/01-aston-martin-vantage.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
+        <h5 class="card-title">Aston Martin The New Vantage 2019</h5>
+        <span class="card-text">ยี่ห้อ: Aston</span><br>
+        <span class="card-text">หมวดหมู่: รถยนต์นั่งขนาดเล็ก</span><br>
+        <span class="card-text">ที่นั่ง: 2 คน</span><br>
+        <span class="card-text">เกียร์: Auto</span><br>
+        <span class="card-text">สี: เทา</span><br>
+        <span class="card-text">ราคา: 5,000 บาท/วัน</span><br>
       </div>
       <div class="card-footer text-center bg-warning">
-        <a class="navbar-brand text-dark" href="#" routerLink="/login">RENT NOW</a>
+        <a class="navbar-brand text-dark" href="#" routerLink="/rental">เช่าเลย</a>
       </div>
     </div>
   </div>

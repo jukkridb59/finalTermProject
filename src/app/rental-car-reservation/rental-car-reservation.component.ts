@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CarServiceService } from '../shared/cars/car-service.service';
+import { Car } from '../shared/cars/car';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-rental-car-reservation',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RentalCarReservationComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private carService: CarServiceService,
+    private fireStore: AngularFirestore
+  ) { }
 
   ngOnInit() {
   }

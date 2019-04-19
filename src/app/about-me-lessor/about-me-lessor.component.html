@@ -3,19 +3,41 @@
   <div class="col-2">
     <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-        aria-controls="v-pills-home" aria-selected="true" routerLink="/lessor">My Rental Car</a>
+        aria-controls="v-pills-home" aria-selected="true" routerLink="/rental">รายการรถเช่า</a>
       <a class="nav-link active bg-dark text-white" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-        role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">Profile</a>
-      <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-        aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps-lessor">Chang Password</a>
+        role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me-lessor">ข้อมูลส่วนตัว</a>
+        <a class="nav-link text-dark" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+        aria-controls="v-pills-home" aria-selected="true" routerLink="/history">ประวัติการเช่ารถ</a>
+
     </div>
   </div>
   <div class="col-10">
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">PROFILE</span>
+      <span class="navbar-brand mb-0 h1">ข้อมูลส่วนตัว</span>
     </nav>
+    <!-- uid: string;
+    userName: string;
+    email: string;
+    emailVerify: boolean;
+    userAddress: string;
+    userSex: string;
+    userAge: Number; -->
 
-    <div>
-      <input type="text">
-    </div>
+      <div class="card mb-3" style="max-width: 95%;" *ngIf="rentalService.userData as user">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="/assets/img/user.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'Super Admin'}}</strong></h1>
+              <p>User ID: <strong>{{user.uid}}</strong></p>
+              <p>Email: <strong>{{user.email}}</strong></p>
+              <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
   </div>

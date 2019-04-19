@@ -1,9 +1,10 @@
 export interface Lessor {
-    $key: string;
-   name: string;
-   email: string;
-   password: string;
-   address: string;
-   sex: string;
-   age: Number;
+    uid: string;
+    email: string;
+    photoURL: string;
+    emailVerified: boolean;
+    userName: string;
+    userAddress: string;
+    userSex: string;
+    userAge: Number;
 }

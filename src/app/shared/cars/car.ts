@@ -10,5 +10,6 @@ export interface Car {
     year: Date;
     price: Number;
     lessorKey: string;
+    status: string;
 
 }

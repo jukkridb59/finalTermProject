@@ -3,53 +3,52 @@
     <div class="col-2">
         <div class="nav flex-column nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active bg-dark text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/rental">Car List</a>
-            <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                aria-controls="v-pills-profile" aria-selected="false" routerLink="/about-me">Profile</a>
+                role="tab" aria-controls="v-pills-home" aria-selected="true" routerLink="/rental">รายการรถเช่า</a>
+
             <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                role="tab" aria-controls="v-pills-messages" aria-selected="false" routerLink="/chang-ps">Chang
-                Password</a>
+                role="tab" aria-controls="v-pills-messages" aria-selected="false"
+                routerLink="/about-me-lessor">ข้อมูลส่วนตัว</a>
 
             <a class="nav-link text-dark" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                role="tab" aria-controls="v-pills-settings" aria-selected="false" routerLink="/rental-history">
-                Rental history</a>
+                role="tab" aria-controls="v-pills-settings" aria-selected="false" routerLink="/history">
+                ประวัติการเช่ารถ</a>
         </div>
     </div>
     <div class="col-10">
         <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">CAR LIST</span>
+            <span class="navbar-brand mb-0 h1">กรุณากรอกรายการเช่ารถ</span>
         </nav>
 
         <!-- Search -->
         <div class="row">
-            <div class="col-3">
+            <!-- <div class="col-3">
                 <nav class="navbar navbar-light bg-warning ">
-                    <span class="navbar-brand mb-0 h1">Search</span>
+                    <span class="navbar-brand mb-0 h1">ค้นหารถเช่า</span>
                 </nav>
                 <form class="px-4 py-3 container bg-secondary">
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Car ID</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">รหัสรถเช่า</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Car ID">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="รหัสรถเช่า">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Band</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">ยี่ห้อ</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Band">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="ยี่ห้อ">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Category</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">ประเภท</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Category">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="ประเภท">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Seat</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">ที่นั่ง</label>
                         <div class="col-sm-8">
                             <select class="form-control">
                                 <option>1</option>
@@ -61,7 +60,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Gear</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">เกียร์</label>
                         <div class="col-sm-8">
                             <select class="form-control">
                                 <option>Automatic</option>
@@ -71,62 +70,53 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Color</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">สีรถ</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Color">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="สีรถ">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Position</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">จังหวัด</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Position">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="จังหวัด">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Year</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">ปีรถ</label>
                         <div class="col-sm-8">
                             <input type="password" class="form-control" id="inputPassword3" placeholder="Year">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">Price</label>
+                        <label for="inputPassword3" class="col-sm-4 col-form-label text-white">ราคา</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Price">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="ราคาต่อวัน">
                         </div>
                     </div>
 
                     <div class="form-group row text-center">
                         <div class="col-sm-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label text-white" for="gridCheck1">
-                                    Confirm
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row text-center">
-                        <div class="col-sm-12">
-                            <button type="submit" class="btn btn-warning">Confirm</button>
+                            <button type="submit" class="btn btn-warning">ยืนยัน</button>
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> -->
 
 
             <!-- Car List -->
-            <div class="col-9 mt-3">
+            <!-- <div class="col-9 mt-3">
                 <div class="card mb-3" style="max-width: 95%;" *ngFor="let item of cars">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="padding-top: 11%;">
                             <img src="/assets/img/002.jpg" class="card-img">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">{{item.carName}}</h5>
+                                <a class="nav-link" href="rental-car-reservation"
+                                    (click)="seeDetail(item)">{{item.carName}}</a>
                                 <span class="card-text">ยี่ห้อ: {{item.carBand}}</span><br>
                                 <span class="card-text">หมวดหมู่: {{item.carCategory}}</span><br>
                                 <span class="card-text">ที่นั่ง: {{item.carSeat}} คน</span><br>
@@ -134,11 +124,66 @@
                                 <span class="card-text">สี: {{item.carColor}}</span><br>
                                 <span class="card-text">จังหวัด: {{item.carPosition}}</span><br>
                                 <span class="card-text">ราคา: {{item.carPrice}} ต่อวัน</span><br>
+                                <span class="card-text">สถานะ: {{item.carStatus}} </span><br>
                             </div>
                         </div>
                     </div>
                 </div>
 
+            </div> -->
+            <div class="px-4 py-3 container mt-3" novalidate>
+                <div class="form-group">
+                    <label for="rgt-username">ชื่อ-นามสกุล</label>
+                    <input type="text" class="form-control" [(ngModel)]="userName" placeholder="ชื่อ-นามสกุล">
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-sex">รถที่เช่า</label>
+                    <select class="form-control" [(ngModel)]="userCar">
+                        <option>Isuzu MU-X 1.9 Ddi CD A/T</option>
+                        <option>Audi TT Coupe 45 TFSI quattro S line MY19</option>
+                        <option>Ford Mustang 2.3L EcoBoost Coupe Performance Pack MY19</option>
+                        <option>MINI Cooper S Hatch 5 ประตู 2019</option>
+                        <option>Toyota C-HR 2019</option>
+                        <option>Aston Martin The New Vantage 2019</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-password">จาก</label>
+                    <input type="text" class="form-control" [(ngModel)]="userDate1" placeholder="จาก">
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-name">ถึง</label>
+                    <input type="name" class="form-control" [(ngModel)]="userDate2" placeholder="ถึง">
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-address">ที่อยู่</label>
+                    <input type="address" class="form-control" [(ngModel)]="userAddress" placeholder="ที่อยู่">
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-sex">เพศ</label>
+                    <select class="form-control" [(ngModel)]="userSex">
+                        <option>ชาย</option>
+                        <option>หญิง</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-age">อายุ</label>
+                    <input type="age" class="form-control" [(ngModel)]="userAge" placeholder="อายุ">
+                </div>
+
+                <div class="form-group">
+                    <label for="rgt-age">เบอร์โทรศัพท์</label>
+                    <input type="text" class="form-control" [(ngModel)]="userPhone" placeholder="เบอร์โทรศัพท์">
+                </div>
+                
+                <button type="submit" class="btn btn-success" (click)="CreateRecord()">ยืนยัน</button>
+                <button type="submit" class="btn btn-danger" routerLink="/home">ยกเลิก</button>
             </div>
         </div>
 
